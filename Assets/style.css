@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
     text-align: center;
 }
 
@@ -8,24 +8,34 @@ h1, h2, h3, h4, h5 {
 }
 
 header {
-    background: radial-gradient(turquoise 50%, lemonchiffon 70%, rgb(255, 226,138) 0%) /*turquoise;*/
+    background: radial-gradient(circle, turquoise 50%, lemonchiffon 70%, rgb(255, 226,138) 0%)
 }
 
+#card {
+    text-align: center;
+}
+.card {
+    background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
+}
 .start-button {
     /*background: silver;
     text-align: center;*/
     background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
-  border-radius: 20x;
-  color: #13293d;
-  cursor: grab;
-  font-size: 2em;
-  letter-spacing: 0.21px;
-  line-height: 16px;
-  max-width: 255px;
-  padding: 20px 52px;
-  text-align: center;
-  transition-duration: 0.15s;
-  transition-property: background-color;
-  transition-timing-function: linear;
-  margin-top: 0.6em;
+    border-radius: 20x;
+    color: #13293d;
+    cursor: grab;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 2.s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+}
+
+body {
+    background:rgb(255, 226,138) 
 }
