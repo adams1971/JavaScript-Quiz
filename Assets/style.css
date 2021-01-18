@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p{
     text-align: center;
 }
 
@@ -11,31 +11,50 @@ header {
     background: radial-gradient(circle, turquoise 50%, lemonchiffon 70%, rgb(255, 226,138) 0%)
 }
 
-#card {
-    text-align: center;
+#card, p {
+    background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
 }
+
 .card {
     background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
 }
 .start-button {
-    /*background: silver;
-    text-align: center;*/
-    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
+    background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
     border-radius: 20x;
     color: #13293d;
     cursor: grab;
     font-size: 2em;
     letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 255px;
+    line-height: 10px;
+    max-width: 200px;
     padding: 20px 52px;
     text-align: center;
-    transition-duration: 2.s;
+    /*transition-duration: 2.s;
     transition-property: background-color;
-    transition-timing-function: linear;
+    transition-timing-function: linear;*/
+    margin-top: 0.6em;
+}
+
+.play {
+    background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
+    border-radius: 20x;
+    color: #13293d;
+    cursor: grab;
+    font-size: 1em;
+    letter-spacing: 0.21px;
+    line-height: 10px;
+    max-width: 200px;
+    padding: 20px 52px;
+    text-align: center;
     margin-top: 0.6em;
 }
 
 body {
     background:rgb(255, 226,138) 
 }
+
+footer {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    word-spacing: 60px;
