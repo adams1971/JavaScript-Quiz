@@ -18,11 +18,11 @@ header {
 .card {
     background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
 }
-.start-button {
+button {
     background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
     border-radius: 20x;
     color: #13293d;
-    cursor: grab;
+    cursor: pointer;
     font-size: 2em;
     letter-spacing: 0.21px;
     line-height: 10px;
@@ -39,7 +39,7 @@ header {
     background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
     border-radius: 20x;
     color: #13293d;
-    cursor: grab;
+    cursor: pointer;
     font-size: 1em;
     letter-spacing: 0.21px;
     line-height: 10px;

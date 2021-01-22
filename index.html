@@ -15,20 +15,22 @@
         <div class= "large-font">JavaScript Flash Cards</div>
             <br>
             <h2>Play against the clock</h2>
-            <h3>Answer Flash Cards correctly and never run out of time.</h3>
-            <H4>Loose time for incorrect answers</H4>
-            <h5> No chicken for you</h5>
+            <h3>Answer Flash Cards.</h3>
+            <h5> You can do it!</h5>
     </header>
+        <div id= "startButton">
+            <button id= "startQuiz">Start</button>
+        </div>
+        <div id = "countdown"></div>
+        
 
-        <div style="text-align: center;">
-            <button class="start-button">Start</button>
+        
         </div>
             <!--added sections for questions/answers-->
     <main>
         <section>
-            <div id="card questions">
+            <div id="cardQuestions">
                 <p>JavaScript Flash Cards</p> 
-                <p>Click Correct Answer</p>
             </div>
         </section>
 
@@ -36,9 +38,9 @@
         <section>
             <div class="card your-score">
                 <div class="correct-incorrect"></div>
-                <h3>Ttl Correct Answers: <span class="correct"></span>
+                <h3>Correct Answers: <span class="correct"></span>
                 </h3>
-                <h3>Ttl Incorrect Answers: <span class="incorrect"></span>
+                <h3>Incorrect Answers: <span class="incorrect"></span>
                 </h3>
             </div>
         </section>
@@ -48,12 +50,12 @@
 
             <!--added card timer-->        
             </div>
-            <div class="card timer">
+            <!--<div class="card timer">
                 <div class = "timer-text">
                 <div class = "large-font timer-count">2</div>
-                <h3>minutes remaining</h3>
+                <h3>time remaining</h3>
                 </div>
-            </div>
+            </div>-->
             <div style="text-align: center;">
                 <button class="play again">Play Again
                 </button>
@@ -63,6 +65,7 @@
     </main>
 <br>
 <br>
+<!--added footer-->
     <div class="container">
         <footer>
           <ul>
