@@ -41,7 +41,7 @@ let questionsArray = [
     }
 ];   
 
-//added user score and high score array
+//added user score and high score array and score variable
 let highScorers = [];
 
 //Header
@@ -49,7 +49,26 @@ let viewScores = document.getElementById('view-scores');
 let timer = document.getElementById('timer');
 console.log("view scores: ", viewScores);
 console.log("timer: ", timer);
-//-------------------------------------------STOPPED
+
+//add main section start, question, initial pages
+//Start Page
+let startPage = document.getElementById('start-page');
+let startButton = document.getElementById('start-button');
+
+//Question Page
+let questionPage = document.getElementById('question-page');
+let question = document.getElementById('question');
+let answers = document.getElementById('answers');
+let feedback = document.getElementById('feedback');
+
+
+//Initials Page
+let intitialEnter = document.getElementById('initial-enter');
+let displayScore = document.getElementById('display-score');
+let initialText = document.getElementById('initial-text');
+let submitInitial = document.getElementById('submit-initial');
+
+
 
 
 
