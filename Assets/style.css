@@ -1,10 +1,13 @@
-h1, h2, h3, h4, h5, p{
+h2, h3, h4, h5, p{
     text-align: center;
+}
+.hide{
+    display: none;
 }
 
 .large-font {
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 header {
@@ -18,20 +21,18 @@ header {
 .card {
     background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
 }
+/*updated font and width of buttons*/
 button {
     background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
     border-radius: 20x;
     color: #13293d;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 20px;
     letter-spacing: 0.21px;
     line-height: 10px;
-    max-width: 200px;
+    max-width: 600px;
     padding: 20px 52px;
-    text-align: center;
-    /*transition-duration: 2.s;
-    transition-property: background-color;
-    transition-timing-function: linear;*/
+    text-align: left;
     margin-top: 0.6em;
 }
 
@@ -55,6 +56,7 @@ body {
 
 footer {
     position: sticky;
-    bottom: 0;
+    bottom: 10;
     text-align: center;
     word-spacing: 60px;
+}

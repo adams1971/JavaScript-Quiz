@@ -6,42 +6,55 @@
 // 4. Display the next question, or display their score if they have finished the quiz
 // 5. Ask for their initials to save the score in local storage (local storage)
 
-var questionDiv = document.querySelector("#cardQuestions");
-var questionNum = 0
-var answerArrayNum = 0 
+//revised ques/answer array
+let questionsArray = [ 
 
-let questions = [ 
-    {
-        Q: "What is a boolean?",
-        A: "True or False",
-        answerArray: ["If and Else", "True or False", "For and While loops", "Roastbeef Sandwich"]
+    question1 ={
+        question: "What is a boolean?",
+        correctAnswer: "True or False",
+        answerArray: ["If and Else", "True or False", "For and While loops", "A string"]
     },
-    {
-        Q: "How is a string identified?",
-        A: "They are writen between single or double quotes",
-        answerArray: [" as a T or F question", "writen between single or double quotes", "seperated by + and , ", "none of the above"]
+    question2 = {
+        question: "How is a string identified?",
+        correctAnswer: "Contained within single or double quotes",
+        answerArray: ["Can be aswered as T or F", "Writen between single or double quotes", "seperated by plus sign and comma ", "Contained within square brackets"]
     },
-    {
-        Q: "Define a Variable?",
-        A: "Container for storing data values",
-        answerArray: ["An if else if statment", "", "Objects that add values together", "Container for storing data values"]
+    question3 = {
+        question: "Define a Variable?",
+        correctAnswer: "Container for storing data values",
+        answerArray: ["An if else if statment", "A method of operation", "Objects that add values together", "Container for storing data values"]
     },
-    {
-        Q: "How are functions executed?",
-        A: "When something calls or invokes it",
-        answerArray: ["By way of a click", "When and operator is subtracted from it", "When something calls or invokes it", "When the style sheet is called"]
+    question4 = {
+        question: "How are functions executed?",
+        correctAnswer: "When something calls or invokes them",
+        answerArray: ["By way of a click", "When an operator is subtracted from it", "When something calls or invokes them", "When the style sheet is called"]
     },
-    {
-        Q: "What are loops used for?",
-        A: "To execute a block of code a number of times",
+    question5 = {
+        question: "What are loops used for?",
+        correctAnswer: "To execute a block of code a number of times",
         answerArray: ["To exucute an if else if statements", "To identify a boolean", "To stop a function", "To execute a block of code a number of times"]
     },
-    {
-        Q: "What is Global Scope?",
-        A: "Varaibles declared outside a function",
+    question6 = {
+        question: "What is Global Scope?",
+        correctAnswer: "Varaibles declared outside a function",
         answerArray: ["Varaibles declared in HTML", "Variables declared outside a function", "The run time of a loop", "Only recognized inside their functions"]
     }
 ];   
+
+//added user score and high score array
+let highScorers = [];
+
+//Header
+let viewScores = document.getElementById('view-scores');
+let timer = document.getElementById('timer');
+console.log("view scores: ", viewScores);
+console.log("timer: ", timer);
+//-------------------------------------------STOPPED
+
+
+
+
+
 //renders questions at the html <p> site
 function renderQuestion() {
     console.log("question " + questionNum)
