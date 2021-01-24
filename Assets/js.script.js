@@ -192,3 +192,104 @@ function organizeHighscores() {
 
     openHighscorePage();
 }
+
+
+// Reads text input/user initials and displays on Highscore page
+// Called by the submitInitial button
+function addInitial(index) {
+
+    let newHighscore = document.createElement('div');
+    newHighscore.textContent = index[0] + " --- " + index[1];
+    newHighscore.classList.add("highscoreInitials");
+    highscoreContainer.appendChild(newHighscore);
+
+}
+
+//Removes all children of #highscore-container
+//Called by the clearHighscore button
+function eraseHighscores() {
+    while (highscoreContainer.hasChildNodes()) {
+        highscoreContainer.removeChild(highscoreContainer.childNodes[0]);
+    }
+}
+
+function clearHighScorers() {
+    eraseHighscores();
+    highScorers = [];
+}
+
+// Returns user to the initial page. Called by the Go Back button
+function openStartPage() {
+    timer.textContent = "Time: " + secondsLeft;
+    timer.classList.remove('hide');
+    isQuizzing = false;
+    hideAll();
+    startPage.classList.remove('hide');
+}
+
+// Randomizes the order of elements in an array
+// Used in questionOrder() to randomize questions and in questionUpdater() 
+// to randomize the order of answers
+function arrayShuffle(arr) {
+    return arr.sort(() => Math.random() - 0.5);
+}
+
+function questionUpdater(array, index) {
+
+    question.textContent = array[index].question;
+    let ans;
+    let but;
+    let currentAnswerArray = arrayShuffle(array[index].answerArray);
+
+    for (let i = 0; i < currentAnswerArray.length; i++) {
+
+        ans = document.createElement('LI');
+        but = document.createElement('button');
+
+        ans.appendChild(but);
+        but.textContent = i + 1 + ". " + currentAnswerArray[i];
+
+        ans.addEventListener("click", questionController);
+
+        answers.appendChild(ans);
+    }
+}
+
+// Removes questions and answers once an answer choice is chosen.
+function clearQuestion() {
+    question.textContent = "";
+    while (answers.hasChildNodes()) {
+        answers.removeChild(answers.childNodes[0]);
+    }
+}
+
+//Determines and displays if answer is correct or false
+// If there are more questions it calles questionUpdater() for the next question
+// and calls openInitialsPage() if there are no more questions
+function questionController(event) {
+
+    if (event.target.textContent.substring(3) === questionsArray[questionArrayOrder[questionIndex]].correctAns) {
+        feedback.textContent = "Correct";
+        secondsLeft += 5;
+        numberCorrect++;
+
+    } else {
+        feedback.textContent = "Incorrect";
+        secondsLeft -= 5;
+        numberIncorrect++;
+    }
+    timer.textContent = "Time: " + secondsLeft;
+        setTimeout(function () {
+            feedback.textContent = ""
+        }, 1000);
+ 
+
+    clearQuestion();
+    questionIndex++;
+    if (questionIndex < questionsArray.length) {
+        questionUpdater(questionsArray, questionArrayOrder[questionIndex]);
+    } else {
+        finalScore = secondsLeft;
+        openInitialsPage();
+    }
+}
