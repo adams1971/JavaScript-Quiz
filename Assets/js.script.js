@@ -95,5 +95,34 @@ function hideAll() {
         }
     }
 }
+//----------------------------------
+//Adds hide class to timer
+//Used in openInitialsPage() and openHighscorePage()
+function hideTimer() {
+    if (!timer.classList.contains('hide')) {
+        timer.classList.add('hide');
+    }
+}
 
+let isQuizzing = false; //Will be True when questions are on the screen
+let quizTime = 50; //quizTime is how many seconds the test will last.
+let secondsLeft; //current number of seconds left on timer
+timer.textContent = "Time: " + quizTime; //Prints initial timer on screen
+let questionIndex;
+let finalScore = 0;
+let numberCorrect;
+let numberIncorrect;
+
+//Outputs a randomized array including the numbers 0 to the length of an array
+//Used to randomize the order of the questions
+function questionOrder(arr) {
+    let arrIndex = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrIndex.push(i);
+    }
+    return arrayShuffle(arrIndex);
+}
+
+//Used in conjunction with questionUpdater() for a random order of questions
+let questionArrayOrder;
 
