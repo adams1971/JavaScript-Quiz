@@ -68,71 +68,32 @@ let displayScore = document.getElementById('display-score');
 let initialText = document.getElementById('initial-text');
 let submitInitial = document.getElementById('submit-initial');
 
+//Added Highscore Page
+let highscorePage = document.getElementById('highscore-page');
+let highscoreContainer = document.getElementById('highscore-container');
+let goBack = document.getElementById('go-back');
+let clearHighscores = document.getElementById('clear-highscores');
+
+
+let pageArray = [startPage, questionPage, intitialEnter, highscorePage];
+
+//adds eventListener funcitonality to each button on index.html
+viewScores.addEventListener("click", openHighscorePage);
+startButton.addEventListener("click", startQuiz);
+submitInitial.addEventListener("click", organizeHighscores);
+clearHighscores.addEventListener("click", clearHighScorers);
+goBack.addEventListener("click", openStartPage);
 
 
 
-
-
-
-//renders questions at the html <p> site
-function renderQuestion() {
-    console.log("question " + questionNum)
-    var question = document.createElement("p") 
-    question.textContent = questions [questionNum].Q;
-    questionDiv.appendChild(question);
-    questionNum ++; 
-    }
-
-//buttons to show answer choices
-function answerArray(){
-    console.log("answer" + answerArrayNum)
-    var answer = document.createElement()
-    answer.textContent = answer [answerArrayNum].A;
-    answerArrayNum.appendChild(answer);
-    answerArrayNum ++;
-}    
-
-
-var countDown = document.getElementById("countdown")
-var timer = 30;
-countDown.textContent = "Time: "+ timer;
-var secondsLeft;
-
-document.getElementById("startQuiz").addEventListener("click", function(){
-
-    secondsLeft = timer;
-    
-    var downloadTimer = setInterval(function function1() {
-        secondsLeft--;
-
-        countDown.textContent = "Time: " + secondsLeft;
-
-        if(secondsLeft < 0 ) {
-            clearInterval(downloadTimer);
-            alert("Time is up");
+//Takes a function of all DOM pointers as an array and adds class hide to each
+//Used in startQuiz(), openInitialsPage(), openHighscorePage(), and openStartpage()
+function hideAll() {
+    for (let i = 0; i < pageArray.length; i++) {
+        if (!pageArray[i].classList.contains('hide')) {
+            pageArray[i].classList.add('hide');
         }
-    },1000);
-    renderQuestion();
-});
+    }
+}
 
 
-
-
-//     myVar = setInterval(function () {
-//         timerCount--;
-//         timerElement.textContent = timerCount;
-//         if (--timerCount >= 0) {
-//         clearInterval(timer);
-//         }
-//     }, 15000);
-// }
-// var timerElement = document.querySelector(".timer-count");
-        // var startButton = document.querySelector(".start-button")
-        // var timer;
-        // var timerCount;
-// arrays to randomize flashing the questions on cards in the form of an alert
-// arrays to create possible answers to each question 
-// may need init function
-// user will start timer when clicked and has 2 minutes to finish 
-//set timer when button is clicked
-//your score increases with each correct answer
