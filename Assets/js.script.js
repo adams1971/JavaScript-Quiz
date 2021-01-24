@@ -95,7 +95,7 @@ function hideAll() {
         }
     }
 }
-//----------------------------------
+
 //Adds hide class to timer
 //Used in openInitialsPage() and openHighscorePage()
 function hideTimer() {
@@ -126,3 +126,37 @@ function questionOrder(arr) {
 //Used in conjunction with questionUpdater() for a random order of questions
 let questionArrayOrder;
 
+//Sets the timer and displays the quiz. 
+//Called by the event listener on the start button.
+function startQuiz() {
+    numberCorrect = 0;
+    numberIncorrect = 0;
+    questionArrayOrder = questionOrder(questionsArray);
+
+    secondsLeft = quizTime;
+    isQuizzing = true;
+    questionIndex = 0;
+    hideAll();
+    questionPage.classList.remove('hide');
+
+    clearQuestion();
+    questionUpdater(questionsArray, questionArrayOrder[questionIndex]);
+
+    //Timer. If the timer runs out then the initial page is opened.
+    let timerInterval = setInterval(function () {
+
+        secondsLeft--;
+        timer.textContent = "Time: " + secondsLeft;
+
+        if (secondsLeft < 0 || !isQuizzing) {
+            clearInterval(timerInterval);
+            secondsLeft = quizTime;
+
+
+            if (isQuizzing) {
+                finalScore = 0;
+                openInitialsPage();
+            }
+        }
+    }, 1000);
+}
