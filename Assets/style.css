@@ -1,3 +1,4 @@
+
 h2, h3, h4, h5, p{
     text-align: center;
 }
@@ -10,17 +11,17 @@ h2, h3, h4, h5, p{
     font-size: 24px;
 }
 
-header {
+/*header {
     background: radial-gradient(circle, turquoise 50%, lemonchiffon 70%, rgb(255, 226,138) 0%)
-}
+}*/
 
-#card, p {
+/*#card, p {
     background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
-}
+}*/
 
-.card {
+/*.card {
     background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
-}
+}*/
 /*updated font and width of buttons*/
 button {
     background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
@@ -32,11 +33,14 @@ button {
     line-height: 10px;
     max-width: 600px;
     padding: 20px 52px;
-    text-align: left;
+    text-align: center;
     margin-top: 0.6em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-.play {
+/*.play {
     background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
     border-radius: 20x;
     color: #13293d;
@@ -48,7 +52,7 @@ button {
     padding: 20px 52px;
     text-align: center;
     margin-top: 0.6em;
-}
+}*/
 
 body {
     background:rgb(255, 226,138) 

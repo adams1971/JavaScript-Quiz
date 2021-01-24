@@ -1,5 +1,5 @@
 
-// So, I gave you a three-step todo list earlier, but I've changed that to five steps:
+
 // 1. Display questions as buttons 
 // 2. Let user click on buttons
 // 3. If user clicked the right button, increase their score. Otherwise, decrease their time
