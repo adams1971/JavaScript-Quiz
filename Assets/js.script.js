@@ -160,3 +160,35 @@ function startQuiz() {
         }
     }, 1000);
 }
+//Function to change page to respective part of index.html
+function openInitialsPage() {
+    hideTimer();
+    if (finalScore < 1) {
+        finalScore = 0;
+    }
+    displayScore.textContent = finalScore;
+    isQuizzing = false;
+    hideAll();
+    intitialEnter.classList.remove('hide');
+}
+
+//Opens Highscore page
+function openHighscorePage() {
+    hideTimer();
+    isQuizzing = false;
+    hideAll();
+    highscorePage.classList.remove('hide');
+}
+
+function organizeHighscores() {
+    highScorers.push([finalScore, initialText.value]);
+
+    highScorers.sort((a, b) => b[0] - a[0]);
+
+    eraseHighscores();
+    for (let i = 0; i < highScorers.length; i++) {
+        addInitial(highScorers[i]);
+    }
+
+    openHighscorePage();
+}
