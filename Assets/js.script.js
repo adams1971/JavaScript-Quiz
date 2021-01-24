@@ -7,7 +7,8 @@
 // 5. Ask for their initials to save the score in local storage (local storage)
 
 var questionDiv = document.querySelector("#cardQuestions");
-var questionNum = 0 
+var questionNum = 0
+var answerArrayNum = 0 
 
 let questions = [ 
     {
@@ -41,7 +42,7 @@ let questions = [
         answerArray: ["Varaibles declared in HTML", "Variables declared outside a function", "The run time of a loop", "Only recognized inside their functions"]
     }
 ];   
-
+//renders questions at the html <p> site
 function renderQuestion() {
     console.log("question " + questionNum)
     var question = document.createElement("p") 
@@ -49,6 +50,16 @@ function renderQuestion() {
     questionDiv.appendChild(question);
     questionNum ++; 
     }
+
+//buttons to show answer choices
+function answerArray(){
+    console.log("answer" + answerArrayNum)
+    var answer = document.createElement()
+    answer.textContent = answer [answerArrayNum].A;
+    answerArrayNum.appendChild(answer);
+    answerArrayNum ++;
+}    
+
 
 var countDown = document.getElementById("countdown")
 var timer = 30;
