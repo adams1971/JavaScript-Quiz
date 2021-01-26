@@ -1,5 +1,5 @@
 # JavaScript-Quiz
-JavaScript Test Your Knowledge App
+JavaScript Multiple Choice Quiz; Test Your Knowledge App
 
 DESCRIPTION
 
@@ -10,6 +10,7 @@ At the end of the quiz, the clock will stop and open a new page notifying the us
 
 
 APPROACH 
+
 My approach to this project started with writing the HTML and the CSS. I followed a template used in our class to get me started. From there I made modifications and changed the direction I was headed. I chose not to use Bootstrap- a mistake that I now see. Starting with some groundwork would have allowed me some time to focus more on the JavaScript portion of the assignment as this is the focus of the week and the weeks to come. 
 
 I struggled with the JS portions finding the code difficult to write and research. This week's course material was mostly new which took me some extra time to comprehend. I worked closely with my tutor to better understand how to break down this project into small parts. That was the real first lesson. From there I was able to begin understanding what was needed to make the questions appear, shuffle the answers, tally the score and make changes to the timer based on the answers. 
