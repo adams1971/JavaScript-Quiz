@@ -16,8 +16,8 @@ let questionsArray = [
     },
     question2 = {
         question: "How is a string identified?",
-        correctAnswer: "Contained within single or double quotes",
-        answerArray: ["Can be aswered as T or F", "Writen between single or double quotes", "seperated by plus sign and comma ", "Contained within square brackets"]
+        correctAnswer: "Written between single or double quotes",
+        answerArray: ["Can be aswered as T or F", "Written between single or double quotes", "seperated by plus sign and comma ", "Contained within square brackets"]
     },
     question3 = {
         question: "Define a Variable?",
@@ -26,8 +26,8 @@ let questionsArray = [
     },
     question4 = {
         question: "How are functions executed?",
-        correctAnswer: "When something calls or invokes them",
-        answerArray: ["By way of a click", "When an operator is subtracted from it", "When something calls or invokes them", "When the style sheet is called"]
+        correctAnswer: "When an event calls or invokes them",
+        answerArray: ["By way of a click", "When an operator is subtracted from it", "When an event calls or invokes them", "When the style sheet is called"]
     },
     question5 = {
         question: "What are loops used for?",
@@ -36,7 +36,7 @@ let questionsArray = [
     },
     question6 = {
         question: "What is Global Scope?",
-        correctAnswer: "Varaibles declared outside a function",
+        correctAnswer: "Variables declared outside a function",
         answerArray: ["Varaibles declared in HTML", "Variables declared outside a function", "The run time of a loop", "Only recognized inside their functions"]
     }
 ];   
@@ -47,8 +47,6 @@ let highScorers = [];
 //Header
 let viewScores = document.getElementById('view-scores');
 let timer = document.getElementById('timer');
-console.log("view scores: ", viewScores);
-console.log("timer: ", timer);
 
 //add main section start, question, initial pages
 //Start Page
@@ -243,7 +241,8 @@ function questionUpdater(array, index) {
 
     for (let i = 0; i < currentAnswerArray.length; i++) {
 
-        ans = document.createElement('LI');
+        //ans = document.createElement('LI');
+        ans = document.createElement('li');
         but = document.createElement('button');
 
         ans.appendChild(but);
@@ -264,11 +263,12 @@ function clearQuestion() {
 }
 
 //Determines and displays if answer is correct or false
-// If there are more questions it calles questionUpdater() for the next question
+// If there are more questions it calls questionUpdater() for the next question
 // and calls openInitialsPage() if there are no more questions
 function questionController(event) {
-
-    if (event.target.textContent.substring(3) === questionsArray[questionArrayOrder[questionIndex]].correctAns) {
+    console.log("event: ",event);
+    
+    if (event.target.textContent.substring(3) === questionsArray[questionArrayOrder[questionIndex]].correctAnswer) {
         feedback.textContent = "Correct";
         secondsLeft += 5;
         numberCorrect++;
@@ -279,11 +279,10 @@ function questionController(event) {
         numberIncorrect++;
     }
     timer.textContent = "Time: " + secondsLeft;
-        setTimeout(function () {
-            feedback.textContent = ""
-        }, 1000);
- 
-
+    setTimeout(function () {
+        feedback.textContent = ""
+    }, 1000);
+       
     clearQuestion();
     questionIndex++;
     if (questionIndex < questionsArray.length) {

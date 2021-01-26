@@ -11,18 +11,6 @@ h2, h3, h4, h5, p{
     font-size: 24px;
 }
 
-/*header {
-    background: radial-gradient(circle, turquoise 50%, lemonchiffon 70%, rgb(255, 226,138) 0%)
-}*/
-
-/*#card, p {
-    background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
-}*/
-
-/*.card {
-    background: radial-gradient(circle, lemonchiffon 70%, rgb(255, 226,138) 0%)
-}*/
-/*updated font and width of buttons*/
 button {
     background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
     border-radius: 20x;
@@ -40,22 +28,13 @@ button {
     display: block;
 }
 
-/*.play {
-    background: radial-gradient(circle, lemonchiffon 30%, turquoise 70%) 0%;
-    border-radius: 20x;
-    color: #13293d;
-    cursor: pointer;
-    font-size: 1em;
-    letter-spacing: 0.21px;
-    line-height: 10px;
-    max-width: 200px;
-    padding: 20px 52px;
-    text-align: center;
-    margin-top: 0.6em;
-}*/
 
 body {
     background:rgb(255, 226,138) 
+}
+
+ul {
+    list-style-type: none;
 }
 
 footer {
